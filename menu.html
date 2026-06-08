@@ -2,35 +2,68 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>微光咖啡廳 - 美味菜單</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美味菜單 - 微光咖啡廳</title>
+<style>
+body { font-family: "Microsoft JhengHei", sans-serif; background-color: #fdf5e6; color: #4a342e; margin: 0; padding: 0; text-align: center; }
+header { background-color: #4a342e; color: white; padding: 30px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+h1 { margin: 0; }
+nav { margin-top: 15px; }
+nav a { color: #fdf5e6; text-decoration: none; margin: 0 15px; font-weight: bold; }
+nav a:hover { color: #d2b48c; }
+
+h2 { font-size: 2.2em; color: #4a342e; margin-top: 40px; position: relative; }
+h2::after { content: ''; display: block; width: 60px; height: 3px; background: #8b5a2b; margin: 10px auto 0; }
+
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 40px; max-width: 1200px; margin: 0 auto; }
+.menu-item { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.06); transition: 0.3s; padding-bottom: 20px; border: 1px solid #eee; }
+.menu-item:hover { transform: translateY(-5px); box-shadow: 0 12px 20px rgba(0,0,0,0.1); }
+.menu-item img { width: 100%; height: 220px; object-fit: cover; }
+.menu-item h3 { margin: 15px 0 8px; color: #4a342e; font-size: 1.3em; }
+.menu-item p { margin: 0; font-weight: bold; color: #8b5a2b; font-size: 1.2em; }
+
+footer { text-align: center; padding: 25px; background: #2d1a15; color: #d2b48c; font-size: 0.95em; font-weight: bold; margin-top: 60px; }
+</style>
 </head>
 <body>
 <header>
 <h1>☕️ 微光咖啡廳 Shimmer Cafe</h1>
 <nav>
-<a href="index.html">首頁</a> |
-<a href="about.html">關於我們</a> |
-<a href="menu.html">美味菜單</a> |
-<a href="reserve.html">線上預約</a> |
-<a href="gallery.html">環境相簿</a> |
-<a href="news.html">最新消息</a> |
-<a href="contact.html">交通資訊</a>
+<a href="index.html">首頁</a> | <a href="about.html">關於我們</a> | <a href="menu.html">美味菜單</a> | <a href="reserve.html">線上預約</a> | <a href="gallery.html">環境相簿</a>
 </nav>
 </header>
-<hr>
-<main>
-<h2>美味菜單</h2>
-<ul>
-<li>招牌手沖咖啡 ------ $150</li>
-<li>經典經典拿鐵 ------ $130</li>
-<li>微光特調冷萃 ------ $140</li>
-<li>法式香草烤布蕾 ---- $120</li>
-<li>宇治抹茶千層蛋糕 -- $150</li>
-</ul>
-</main>
-<hr>
+
+<h2>我們的精選菜單</h2>
+<div class="menu-grid">
+<div class="menu-item">
+<img src="http://googleusercontent.com/image_collection/image_retrieval/8269788740090059766" alt="招牌手沖咖啡">
+<h3>招牌手沖咖啡</h3>
+<p>$150</p>
+</div>
+<div class="menu-item">
+<img src="http://googleusercontent.com/image_collection/image_retrieval/4506684562914364386" alt="經典拿鐵咖啡">
+<h3>經典拿鐵咖啡</h3>
+<p>$130</p>
+</div>
+<div class="menu-item">
+<img src="http://googleusercontent.com/image_collection/image_retrieval/11612450160403190985" alt="微光特調冷萃">
+<h3>微光特調冷萃</h3>
+<p>$140</p>
+</div>
+<div class="menu-item">
+<img src="http://googleusercontent.com/image_collection/image_retrieval/17203673920918943843" alt="法式香草烤布蕾">
+<h3>法式香草烤布蕾</h3>
+<p>$120</p>
+</div>
+<div class="menu-item">
+<img src="http://googleusercontent.com/image_collection/image_retrieval/4185177058757693951" alt="宇治抹茶千層蛋糕">
+<h3>宇治抹茶千層蛋糕</h3>
+<p>$150</p>
+</div>
+</div>
+
 <footer>
-<p>11402餐旅資訊管理_成果報告-微光咖啡廳</p>
+<p>11402餐旅資訊管理_第8組微光咖啡廳報告示範</p>
 </footer>
 </body>
 </html>
