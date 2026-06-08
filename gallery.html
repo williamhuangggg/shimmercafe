@@ -2,29 +2,58 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>微光咖啡廳 - 環境相簿</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>環境相簿 - 微光咖啡廳</title>
+<style>
+body { font-family: "Microsoft JhengHei", sans-serif; background-color: #fdf5e6; color: #4a342e; margin: 0; padding: 0; text-align: center; }
+header { background-color: #4a342e; color: white; padding: 30px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+h1 { margin: 0; }
+nav { margin-top: 15px; }
+nav a { color: #fdf5e6; text-decoration: none; margin: 0 15px; font-weight: bold; }
+nav a:hover { color: #d2b48c; }
+
+h2 { font-size: 2.2em; color: #4a342e; margin-top: 40px; position: relative; }
+h2::after { content: ''; display: block; width: 60px; height: 3px; background: #8b5a2b; margin: 10px auto 0; }
+p.sub { color: #6d4c41; margin-bottom: 30px; }
+
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 0 40px; max-width: 1200px; margin: 0 auto; }
+.gallery-item { position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); height: 250px; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.gallery-item:hover img { transform: scale(1.1); }
+
+.gallery-desc { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(74, 52, 46, 0.8); color: white; padding: 10px; font-size: 0.95em; }
+
+footer { text-align: center; padding: 25px; background: #2d1a15; color: #d2b48c; font-size: 0.95em; font-weight: bold; margin-top: 60px; }
+</style>
 </head>
 <body>
 <header>
 <h1>☕️ 微光咖啡廳 Shimmer Cafe</h1>
 <nav>
-<a href="index.html">首頁</a> |
-<a href="about.html">關於我們</a> |
-<a href="menu.html">美味菜單</a> |
-<a href="reserve.html">線上預約</a> |
-<a href="gallery.html">環境相簿</a> |
-<a href="news.html">最新消息</a> |
-<a href="contact.html">交通資訊</a>
+<a href="index.html">首頁</a> | <a href="about.html">關於我們</a> | <a href="menu.html">美味菜單</a> | <a href="reserve.html">線上預約</a> | <a href="gallery.html">環境相簿</a>
 </nav>
 </header>
-<hr>
-<main>
-<h2>環境相簿</h2>
-<p>這裡記錄了店內的每一個溫馨角落，靜候您的光臨與拍照打卡。</p>
-</main>
-<hr>
+
+<h2>微光環境相簿</h2>
+<p class="sub">這裡記錄了店內的每一個溫馨角落，靜候您的光臨與拍照打卡。</p>
+
+<div class="gallery-grid">
+<div class="gallery-item">
+<img src="http://googleusercontent.com/image_collection/image_retrieval/235549764681213833" alt="溫馨吧台區">
+<div class="gallery-desc">質感木製吧台與專業手沖區</div>
+</div>
+<div class="gallery-item">
+<img src="http://googleusercontent.com/image_collection/image_retrieval/7301412206989901993" alt="陽光靠窗座">
+<div class="gallery-desc">午後陽光灑落的靜謐靠窗座位</div>
+</div>
+<div class="gallery-item">
+<img src="http://googleusercontent.com/image_collection/image_retrieval/7267917305963551960" alt="舒適沙發區">
+<div class="gallery-desc">適合與好友共度午後的復古沙發</div>
+</div>
+</div>
+
 <footer>
-<p>11402餐旅資訊管理_成果報告-微光咖啡廳</p>
+<p>11402餐旅資訊管理_第8組微光咖啡廳報告示範</p>
 </footer>
 </body>
 </html>
