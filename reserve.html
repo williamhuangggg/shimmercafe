@@ -2,29 +2,90 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>微光咖啡廳 - 線上預約</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>線上預約 - 微光咖啡廳</title>
+<style>
+body { font-family: "Microsoft JhengHei", sans-serif; background-color: #fdf5e6; color: #4a342e; margin: 0; padding: 0; }
+header { background-color: #4a342e; color: white; padding: 30px 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+h1 { margin: 0; }
+nav { margin-top: 15px; }
+nav a { color: #fdf5e6; text-decoration: none; margin: 0 15px; font-weight: bold; }
+nav a:hover { color: #d2b48c; }
+
+.reserve-container { max-width: 650px; margin: 50px auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 8px solid #8b5a2b; }
+h2 { text-align: center; color: #4a342e; margin-bottom: 30px; font-size: 1.8em; }
+
+.form-group { margin-bottom: 22px; }
+label { display: block; font-weight: bold; margin-bottom: 8px; color: #4a342e; }
+input[type="text"], input[type="tel"], input[type="date"], select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 1em; background-color: #fafafa; }
+input:focus, select:focus { outline: none; border-color: #8b5a2b; background-color: #fff; }
+
+.menu-select-box { background: #fdfaf5; padding: 20px; border-radius: 10px; border: 1px dashed #d2b48c; }
+.menu-select-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.menu-select-item:last-child { margin-bottom: 0; }
+.menu-select-item span { font-weight: bold; }
+.menu-select-item select { width: 100px; padding: 6px; }
+
+.submit-btn { width: 100%; background: #8b5a2b; color: white; padding: 15px; border: none; border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+.submit-btn:hover { background: #4a342e; }
+
+footer { text-align: center; padding: 25px; background: #2d1a15; color: #d2b48c; font-size: 0.95em; font-weight: bold; margin-top: 60px; }
+</style>
 </head>
 <body>
 <header>
 <h1>☕️ 微光咖啡廳 Shimmer Cafe</h1>
 <nav>
-<a href="index.html">首頁</a> |
-<a href="about.html">關於我們</a> |
-<a href="menu.html">美味菜單</a> |
-<a href="reserve.html">線上預約</a> |
-<a href="gallery.html">環境相簿</a> |
-<a href="news.html">最新消息</a> |
-<a href="contact.html">交通資訊</a>
+<a href="index.html">首頁</a> | <a href="about.html">關於我們</a> | <a href="menu.html">美味菜單</a> | <a href="reserve.html">線上預約</a> | <a href="gallery.html">環境相簿</a>
 </nav>
 </header>
-<hr>
-<main>
-<h2>線上預約訂位系統</h2>
-<p>（預約表單與 Google Sheet 後端串聯建置中，敬請期待）</p>
-</main>
-<hr>
+
+<div class="reserve-container">
+<h2>線上預約訂購系統</h2>
+<form>
+<div class="form-group">
+<label>訂購人姓名</label>
+<input type="text" placeholder="請輸入您的真實姓名" required>
+</div>
+<div class="form-group">
+<label>聯絡電話</label>
+<input type="tel" placeholder="請輸入手機號碼（例：0912345678）" required>
+</div>
+<div class="form-group">
+<label>預計到店取貨日期</label>
+<input type="date" required>
+</div>
+<div class="form-group">
+<label>選擇預購餐點與數量</label>
+<div class="menu-select-box">
+<div class="menu-select-item">
+<span>1. 招牌手沖咖啡 ($150)</span>
+<select><option>0 份</option><option>1 份</option><option>2 份</option><option>3 份</option></select>
+</div>
+<div class="menu-select-item">
+<span>2. 經典拿鐵咖啡 ($130)</span>
+<select><option>0 份</option><option>1 份</option><option>2 份</option><option>3 份</option></select>
+</div>
+<div class="menu-select-item">
+<span>3. 微光特調冷萃 ($140)</span>
+<select><option>0 份</option><option>1 份</option><option>2 份</option><option>3 份</option></select>
+</div>
+<div class="menu-select-item">
+<span>4. 法式香草烤布蕾 ($120)</span>
+<select><option>0 份</option><option>1 份</option><option>2 份</option><option>3 份</option></select>
+</div>
+<div class="menu-select-item">
+<span>5. 宇治抹茶千層蛋糕 ($150)</span>
+<select><option>0 份</option><option>1 份</option><option>2 份</option><option>3 份</option></select>
+</div>
+</div>
+</div>
+<button type="button" class="submit-btn" onclick="alert('您的預約訂單已成功送出！感謝您對微光咖啡廳的支持。')">確認送出預約</button>
+</form>
+</div>
+
 <footer>
-<p>11402餐旅資訊管理_成果報告-微光咖啡廳</p>
+<p>11402餐旅資訊管理_第8組微光咖啡廳報告示範</p>
 </footer>
 </body>
 </html>
