@@ -1,80 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<title>線上預約 - 微光咖啡廳</title>
-<style>
-body { font-family: "Microsoft JhengHei", sans-serif; background-color: #fdf5e6; color: #4a342e; margin: 0; padding: 0; text-align: center; }
-header { background-color: #4a342e; color: white; padding: 30px 20px; }
-nav { margin-top: 15px; }
-nav a { color: #fdf5e6; text-decoration: none; margin: 0 15px; font-weight: bold; }
-.reserve-container { max-width: 600px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-top: 8px solid #8b5a2b; text-align: left; }
-.form-group { margin-bottom: 20px; }
-label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 1.1em; }
-input[type="text"], input[type="tel"], input[type="date"] { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
-.item-select-group { background: #fff8f0; padding: 20px; border-radius: 10px; border: 1px dashed #d2b48c; margin-top: 20px; }
-.item-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-.item-row:last-child { margin-bottom: 0; }
-select { padding: 8px 15px; border-radius: 5px; border: 1px solid #ccc; }
-.submit-btn { width: 100%; background: #8b5a2b; color: white; padding: 16px; border: none; border-radius: 6px; font-weight: bold; font-size: 1.2em; cursor: pointer; margin-top: 25px; transition: background 0.2s; }
-.submit-btn:hover { background: #4a342e; }
-footer { text-align: center; padding: 25px; background: #2d1a15; color: #d2b48c; font-size: 15px; font-weight: bold; margin-top: 60px; }
-</style>
+    <meta charset="UTF-8">
+    <title>線上預約 - 微光咖啡廳</title>
+    <style>
+        body { font-family: "Microsoft JhengHei", sans-serif; background-color: #fdf5e6; color: #4a342e; margin: 0; padding: 0; text-align: center; }
+        header { background-color: #4a342e; color: white; padding: 30px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        nav { margin-top: 15px; }
+        nav a { color: #fdf5e6; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        .reserve-container { max-width: 600px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-top: 8px solid #8b5a2b; text-align: left; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-weight: bold; margin-bottom: 8px; }
+        input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        .item-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding: 10px; background: #fffaf5; border-radius: 5px; }
+        /* 讓按鈕外觀不變，但本質上是一個漂亮的超連結 */
+        .submit-link { display: block; text-align: center; background: #8b5a2b; color: white; padding: 16px; border-radius: 6px; font-weight: bold; font-size: 1.2em; text-decoration: none; transition: 0.3s; }
+        .submit-link:hover { background: #4a342e; }
+        footer { text-align: center; padding: 25px; background: #2d1a15; color: #d2b48c; font-size: 15px; font-weight: bold; margin-top: 60px; border-top: 3px solid #8b5a2b; }
+    </style>
 </head>
 <body>
-<header>
-<h1>☕️ 微光咖啡廳 Shimmer Cafe</h1>
-<nav>
-<a href="index.html">首頁</a> | <a href="about.html">關於我們</a> | <a href="menu.html">美味菜單</a> | <a href="reserve.html">線上預約</a> | <a href="gallery.html">環境相簿</a> | <a href="news.html">最新消息</a> | <a href="contact.html">交通資訊</a>
-</nav>
-</header>
+    <header>
+        <h1>☕️ 微光咖啡廳 Shimmer Cafe</h1>
+        <nav>
+            <a href="index.html">首頁</a> | <a href="about.html">關於我們</a> | <a href="menu.html">美味菜單</a> | <a href="reserve.html">線上預約</a> | <a href="gallery.html">環境相簿</a> | <a href="news.html">最新消息</a> | <a href="contact.html">交通資訊</a>
+        </nav>
+    </header>
 
-<div class="reserve-container">
-<h2 style="text-align: center; color: #4a342e; margin-bottom: 30px;">填寫預約訂購資料</h2>
-<form>
-<div class="form-group">
-<label>訂購人姓名：</label>
-<input type="text" placeholder="請輸入姓名">
-</div>
-<div class="form-group">
-<label>聯絡電話：</label>
-<input type="tel" placeholder="請輸入電話">
-</div>
-<div class="form-group">
-<label>預計到店取貨日期與時間：</label>
-<input type="date">
-</div>
+    <div class="reserve-container">
+        <h2 style="text-align: center;">線上預約系統</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">為提供您最棒的餐點品質，請點擊下方按鈕前往我們的官方系統預約。</p>
+        
+        <a href="https://docs.google.com/forms/d/e//https:/docs.google.com/forms/d/1FlyP6G1so1u1Y0UWa9Ya5AeTDmdntJ8RZO2_XGZ9YTM/edit/viewform" target="_blank" class="submit-link">
+            <i class="fa-solid fa-calendar-check"></i> 點我前往 Google 系統預約
+        </a>
+    </div>
 
-<div class="item-select-group">
-<h3 style="margin-top: 0; color: #8b5a2b;">選擇預訂品項與數量</h3>
-<div class="item-row">
-<span>1. 招牌手沖咖啡 ($150)</span>
-<select><option>0 份</option><option>1 份</option><option>2 份</option><option>3 份</option></select>
-</div>
-<div class="item-row">
-<span>2. 經典拿鐵咖啡 ($130)</span>
-<select><option>0 份</option><option>1 份</option><option>2 份</option><option>3 份</option></select>
-</div>
-<div class="item-row">
-<span>3. 微光特調冷萃 ($140)</span>
-<select><option>0 份</option><option>1 份</option><option>2 份</option><option>3 份</option></select>
-</div>
-<div class="item-row">
-<span>4. 法式香草烤布蕾 ($120)</span>
-<select><option>0 份</option><option>1 份</option><option>2 份</option><option>3 份</option></select>
-</div>
-<div class="item-row">
-<span>5. 宇治抹茶千層蛋糕 ($150)</span>
-<select><option>0 份</option><option>1 份</option><option>2 份</option><option>3 份</option></select>
-</div>
-</div>
-
-<button type="button" class="submit-btn" onclick="alert('預約成功！我們已收到您的餐點預訂，期待您的光臨！')">送出預約訂單</button>
-</form>
-</div>
-
-<footer>
-<p>11402餐旅資訊管理_第8組微光咖啡廳報告示範</p>
-</footer>
+    <footer>
+        <p>11402餐旅資訊管理_第8組微光咖啡廳報告示範</p>
+    </footer>
 </body>
 </html>
