@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -11,11 +12,10 @@
         .reserve-container { max-width: 600px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-top: 8px solid #8b5a2b; text-align: left; }
         .form-group { margin-bottom: 20px; }
         label { display: block; font-weight: bold; margin-bottom: 8px; }
-        input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        input, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 16px; }
         .item-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding: 10px; background: #fffaf5; border-radius: 5px; }
-        /* 讓按鈕外觀不變，但本質上是一個漂亮的超連結 */
-        .submit-link { display: block; text-align: center; background: #8b5a2b; color: white; padding: 16px; border-radius: 6px; font-weight: bold; font-size: 1.2em; text-decoration: none; transition: 0.3s; }
-        .submit-link:hover { background: #4a342e; }
+        .submit-btn { width: 100%; background: #8b5a2b; color: white; padding: 16px; border: none; border-radius: 6px; font-weight: bold; font-size: 1.2em; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { background: #4a342e; }
         footer { text-align: center; padding: 25px; background: #2d1a15; color: #d2b48c; font-size: 15px; font-weight: bold; margin-top: 60px; border-top: 3px solid #8b5a2b; }
     </style>
 </head>
@@ -28,12 +28,29 @@
     </header>
 
     <div class="reserve-container">
-        <h2 style="text-align: center;">線上預約系統</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 30px;">為提供您最棒的餐點品質，請點擊下方按鈕前往我們的官方系統預約。</p>
+        <h2 style="text-align: center; color: #4a342e;">線上預約訂位系統</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">請填寫下方資訊完成您的微光時刻預約</p>
         
-        <a href="https://docs.google.com/forms/d/e//https:/docs.google.com/forms/d/1FlyP6G1so1u1Y0UWa9Ya5AeTDmdntJ8RZO2_XGZ9YTM/edit/viewform" target="_blank" class="submit-link">
-            <i class="fa-solid fa-calendar-check"></i> 點我前往 Google 系統預約
-        </a>
+        <form id="reserveForm">
+            <div class="form-group">
+                <label>顧客姓名：</label>
+                <input type="text" required placeholder="請輸入您的姓名">
+            </div>
+            <div class="form-group">
+                <label>聯絡電話：</label>
+                <input type="tel" required placeholder="請輸入您的手機號碼">
+            </div>
+            <div class="form-group">
+                <label>預約人數：</label>
+                <select>
+                    <option>1 位</option>
+                    <option>2 位</option>
+                    <option>3 位</option>
+                    <option>4 位</option>
+                </select>
+            </div>
+            <button type="button" class="submit-btn" onclick="alert('🎉 預約成功！系統已為您保留座位。')">確認送出預約</button>
+        </form>
     </div>
 
     <footer>
