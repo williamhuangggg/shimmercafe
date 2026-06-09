@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -9,13 +8,31 @@
         header { background-color: #4a342e; color: white; padding: 30px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         nav { margin-top: 15px; }
         nav a { color: #fdf5e6; text-decoration: none; margin: 0 15px; font-weight: bold; }
-        .reserve-container { max-width: 600px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-top: 8px solid #8b5a2b; text-align: left; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; font-weight: bold; margin-bottom: 8px; }
-        input, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 16px; }
-        .item-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding: 10px; background: #fffaf5; border-radius: 5px; }
-        .submit-btn { width: 100%; background: #8b5a2b; color: white; padding: 16px; border: none; border-radius: 6px; font-weight: bold; font-size: 1.2em; cursor: pointer; transition: 0.3s; }
-        .submit-btn:hover { background: #4a342e; }
+        
+        .reserve-container { 
+            max-width: 800px; 
+            margin: 40px auto; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            border-top: 8px solid #8b5a2b; 
+        }
+        
+        /* 讓內嵌表單具備響應式，自動充滿容器 */
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            height: 1150px; /* 💡 幫你調高到 1150px，確保日期選單完整顯示、不出現雙捲軸 */
+            overflow: hidden;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         footer { text-align: center; padding: 25px; background: #2d1a15; color: #d2b48c; font-size: 15px; font-weight: bold; margin-top: 60px; border-top: 3px solid #8b5a2b; }
     </style>
 </head>
@@ -28,29 +45,12 @@
     </header>
 
     <div class="reserve-container">
-        <h2 style="text-align: center; color: #4a342e;">線上預約訂位系統</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 30px;">請填寫下方資訊完成您的微光時刻預約</p>
+        <h2 style="color: #4a342e;">線上預約訂位系統</h2>
+        <p style="color: #666; margin-bottom: 20px;">請填寫下方資訊完成您的微光時刻預約</p>
         
-        <form id="reserveForm">
-            <div class="form-group">
-                <label>顧客姓名：</label>
-                <input type="text" required placeholder="請輸入您的姓名">
-            </div>
-            <div class="form-group">
-                <label>聯絡電話：</label>
-                <input type="tel" required placeholder="請輸入您的手機號碼">
-            </div>
-            <div class="form-group">
-                <label>預約人數：</label>
-                <select>
-                    <option>1 位</option>
-                    <option>2 位</option>
-                    <option>3 位</option>
-                    <option>4 位</option>
-                </select>
-            </div>
-            <button type="button" class="submit-btn" onclick="alert('🎉 預約成功！系統已為您保留座位。')">確認送出預約</button>
-        </form>
+        <div class="iframe-wrapper">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXBIjdYhWDHmPljiYkxvZpU5R4nxi0G4Vh7GHFI8Wf_kE63Q/viewform?embedded=true">載入中…</iframe>
+        </div>
     </div>
 
     <footer>
