@@ -2,28 +2,51 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>微光咖啡廳 - 交通資訊</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>交通資訊 - 微光咖啡廳</title>
+<style>
+body { font-family: "Microsoft JhengHei", sans-serif; background-color: #fdf5e6; color: #4a342e; margin: 0; padding: 0; }
+header { background-color: #4a342e; color: white; padding: 30px 20px; text-align: center; }
+nav a { color: #fdf5e6; text-decoration: none; margin: 0 10px; font-weight: bold; }
+.container { max-width: 900px; margin: 50px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.info-box { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+h2 { color: #8b5a2b; margin-bottom: 25px; }
+.map-placeholder { background: #e0e0e0; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #666; border: 2px solid #ddd; }
+.contact-list { list-style: none; padding: 0; }
+.contact-list li { margin-bottom: 15px; border-bottom: 1px solid #f5ebe0; padding-bottom: 10px; }
+.contact-list strong { color: #8b5a2b; }
+footer { text-align: center; padding: 25px; background: #2d1a15; color: #d2b48c; font-size: 15px; font-weight: bold; margin-top: 60px; }
+</style>
 </head>
 <body>
 <header>
 <h1>☕️ 微光咖啡廳 Shimmer Cafe</h1>
 <nav>
-<a href="index.html">首頁</a> |
-<a href="about.html">關於我們</a> |
-<a href="menu.html">美味菜單</a> |
-<a href="reserve.html">線上預約</a> |
-<a href="gallery.html">環境相簿</a> |
-<a href="news.html">最新消息</a> |
-<a href="contact.html">交通資訊</a>
+<a href="index.html">首頁</a> | <a href="about.html">關於我們</a> | <a href="menu.html">美味菜單</a> | <a href="reserve.html">線上預約</a> | <a href="gallery.html">環境相簿</a> | <a href="news.html">最新消息</a> | <a href="contact.html">交通資訊</a>
 </nav>
 </header>
-<hr>
-<main>
-<h2>交通資訊</h2>
-<p>📍 店址：新北市新莊區中正路510號（輔仁大學餐旅管理系旁）</p>
-<p>📞 電話：(02) 2905-2000</p>
-</main>
-<hr>
+
+<div class="container">
+<div class="info-box">
+<h2>聯絡資訊</h2>
+<ul class="contact-list">
+<li><strong>店鋪地址：</strong> 新北市新莊區中正路510號 (輔大校園內-利賢樓)</li>
+<li><strong>連絡電話：</strong> (02) 2905-2000</li>
+<li><strong>電子信箱：</strong> service@shimmercafe.com.tw</li>
+<li><strong>營業時間：</strong> 週一至週五 08:00 - 18:00 (週六、日公休)</li>
+</ul>
+<p>※ 國定假日公休，如有特別休假將於「最新消息」公告。</p>
+</div>
+
+<div class="info-box">
+<h2>交通位置</h2>
+<div class="map-placeholder">
+📍 地圖位置導覽 (Google Map 預留區塊)
+</div>
+<p style="margin-top: 15px;">搭乘捷運「輔大站」1 號出口，步行約 5 分鐘即可抵達校園內利賢樓 1 樓。</p>
+</div>
+</div>
+
 <footer>
 <p>11402餐旅資訊管理_第8組微光咖啡廳報告示範</p>
 </footer>
